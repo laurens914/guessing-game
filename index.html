@@ -11,7 +11,7 @@
           <p> I grew up in Seattle. I studied at WSU and UW graduating with a Media and Communications degree. I have been working in account management and am very excited to work more in coding!</p>
     <script>
     var user = prompt('What is your name?');
-    console.log(user);
+    console.log("users name=" + user);
     alert('Happy weekend! ' + user + ', time for a cold beer!');
 
     var correct = 0;
@@ -23,31 +23,36 @@
       correct = correct + 1;
       console.log("correct = " + correct);
     } else {
+      console.log("frist response incorrect")
       alert('incorrect, sorry ' + user + ', I have 1 sister');
     }
 
     var b = prompt('Have I lived anywhere but Seattle?');
     if (b === 'yes' ||  b ==='y' || b === 'Yes' || b === 'Y'){
-      console.log(b);
+      console.log("second response: " + b);
       alert('Correct ' + user + '! I lived in Pullman during college');
       correct = correct + 1;
+      console.log("correct =" + correct);
     } else {
+      console.log("second response incorrect");
       alert('Sorry ' + user + ', I lived in Pullman for 2 years');
     }
 
     var c = prompt('Have I ever been to Austrailia?');
     if (c === 'no' || c === 'n' || c === 'No' || c ==='N') {
-      console.log(c);
+      console.log("third response: " + c);
       alert('Correct ' + user + '! But I would love to go!');
       correct = correct + 1;
+      console.log("correct =" + correct);
     } else {
+      console.log("third response incorrect");
       alert('Sorry, ' + user + ', sadly, no I have not been there.');
     }
 
     var age = prompt('How Old am I?');
     console.log("age is a...: " + typeof(age));
     var ageToNumber = parseInt(age);
-    console.log(ageToNumber);
+    console.log("ageToNumber =" + ageToNumber);
     console.log(typeof(ageToNumber));
     if (ageToNumber === 25){
       alert('Correct ' + user + '!');
