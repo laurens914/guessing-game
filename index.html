@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <h1>My Javascript</h1>
+        <p> my javascript here prompts the user to input their name and then gives them an alert about their weekend. After, there are 3 prompts that ask the user to input yes or no to three questions. Once they answer, they will see an alert that tells the user if they were correct or incorrect.</p>
+      <h2> About Me </h2>
+          <p> I grew up in Seattle. I studied at WSU and UW graduating with a Media and Communications degree. I have been working in account management and am very excited to work more in coding!</p>
+    <script>
+    var user = prompt('What is your name?');
+    console.log(user);
+    alert('Happy weekend! ' + user + ', time for a cold beer!');
+
+    var correct = 0;
+    var a = prompt('Do I have any siblings? (yes or no repsonses)');
+    console.log("first prompt finished");
+    if (a === 'yes' || a === 'y' || a === 'Yes' || a === 'Y'){
+      console.log("first response: " + a);
+      alert('Yes! Correct ' + user + ' I have 1 sister');
+      correct = correct + 1;
+      console.log("correct = " + correct);
+    } else {
+      alert('incorrect, sorry ' + user + ', I have 1 sister');
+    }
+
+    var b = prompt('Have I lived anywhere but Seattle?');
+    if (b === 'yes' ||  b ==='y' || b === 'Yes' || b === 'Y'){
+      console.log(b);
+      alert('Correct ' + user + '! I lived in Pullman during college');
+      correct = correct + 1;
+    } else {
+      alert('Sorry ' + user + ', I lived in Pullman for 2 years');
+    }
+
+    var c = prompt('Have I ever been to Austrailia?');
+    if (c === 'no' || c === 'n' || c === 'No' || c ==='N') {
+      console.log(c);
+      alert('Correct ' + user + '! But I would love to go!');
+      correct = correct + 1;
+    } else {
+      alert('Sorry, ' + user + ', sadly, no I have not been there.');
+    }
+
+    var age = prompt('How Old am I?');
+    console.log("age is a...: " + typeof(age));
+    var ageToNumber = parseInt(age);
+    console.log(ageToNumber);
+    console.log(typeof(ageToNumber));
+    if (ageToNumber === 25){
+      alert('Correct ' + user + '!');
+      correct = correct + 1;
+    } else if (ageToNumber >= 26){
+      alert('Too High!');
+    } else {
+      alert('Too Low');
+    }
+    alert('you got ' + correct + ' right answers!');
+
+    </script>
+  </body>
+</html>
